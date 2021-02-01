@@ -12,9 +12,11 @@ let main argv =
     
     printfn "\n\n DEBUG \n\n"
     
-    #endif
+    #else
 
     data.Datas.[0].Rows
     |> Array.iter (fun x -> printfn "%s" x.Title.Value)
+
+    #endif
 
     0 // return an integer exit code
