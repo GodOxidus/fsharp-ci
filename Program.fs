@@ -9,7 +9,7 @@ let main argv =
     let data = MoexNews.Load "https://iss.moex.com/iss/sitenews.xml"
     
     let secret  =  Environment.GetEnvironmentVariable "SECRET"
-    printfn "%s" secret
+    printfn "secret is: %s" secret.Replace("1", "*")
 
     #if DEBUG
     
