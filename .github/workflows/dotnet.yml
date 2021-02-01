@@ -27,5 +27,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore --configuration Release
-    - name: Test
+    - shell: bash
+      env: 
+        SECRET:  ${{ secrets.SECRET }}
       run: dotnet run --no-build --configuration Release
