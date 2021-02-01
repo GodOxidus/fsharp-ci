@@ -7,6 +7,9 @@ type MoexNews = XmlProvider<"https://iss.moex.com/iss/sitenews.xml">
 [<EntryPoint>]
 let main argv =
     let data = MoexNews.Load "https://iss.moex.com/iss/sitenews.xml"
+    
+    let secret  =  Environment.GetEnvironmentVariable "SECRET"
+    printfn "%s" secret
 
     #if DEBUG
     
