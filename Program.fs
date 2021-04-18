@@ -1,5 +1,8 @@
 open System
 open FSharp.Data
+open System.Diagnostics
+open System.IO
+
 
 
 type MoexNews = XmlProvider<"https://iss.moex.com/iss/sitenews.xml">
