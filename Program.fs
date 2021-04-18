@@ -15,7 +15,7 @@ let main argv =
     printfn "secret is: %s" (secret.Replace("1", "*"))
 
     let info = ProcessStartInfo()
-    info.FileName       <- "python"
+    info.FileName       <- "pythawfean"
     info.CreateNoWindow <- false
     
     Process.Start(info).WaitForExitAsync().Wait()
