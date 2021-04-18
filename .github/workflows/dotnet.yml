@@ -55,4 +55,4 @@ jobs:
     - shell: bash
       env:
         PYTHON_PATH: $(which python)
-      run: echo $PYTHON_PATHS
+      run: echo $PYTHON_PATH
