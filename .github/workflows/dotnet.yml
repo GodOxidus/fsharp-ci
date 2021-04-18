@@ -38,7 +38,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Pip install
-      run: pip install -Iv matplotlib==3.4.1
+      run: pip install matplotlib
     - name: Build
       run: dotnet build --no-restore --configuration Release
     - shell: bash
