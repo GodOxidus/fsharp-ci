@@ -11,6 +11,12 @@ let main argv =
     let secret  =  Environment.GetEnvironmentVariable "SECRET"
     printfn "secret is: %s" (secret.Replace("1", "*"))
 
+    let info = ProcessStartInfo()
+    info.FileName       <- "python"
+    info.CreateNoWindow <- false
+    
+    Process.Start(info).WaitForExitAsync() |> Async.AwaitTask
+
     #if DEBUG
     
     printfn "\n\n DEBUG \n\n"
