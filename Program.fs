@@ -18,7 +18,7 @@ let main argv =
     info.FileName       <- "python"
     info.CreateNoWindow <- false
     
-    Process.Start(info).WaitForExitAsync() |> Async.AwaitTask
+    Process.Start(info).WaitForExitAsync().Wait()
 
     #if DEBUG
     
