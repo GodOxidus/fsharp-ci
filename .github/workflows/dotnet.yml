@@ -51,3 +51,8 @@ jobs:
       env: 
         SECRET:  ${{ secrets.SECRET }}
       run: dotnet run --no-build --configuration Release
+      
+    - shell: bash
+      env:
+        PYTHON_PATH: ${{ which python }}
+      run: echo $PYTHON_PATHS
