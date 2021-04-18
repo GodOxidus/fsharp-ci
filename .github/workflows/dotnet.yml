@@ -28,9 +28,9 @@ jobs:
         path: /.nuget/packages
         key: ${{ runner.os }}-nuget
     - shell: bash
-      run: where python
+      run: whitch python
     - shell: bash
-      run: where pip
+      run: whitch pip
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
